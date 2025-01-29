@@ -15,10 +15,6 @@ const App = () => {
   return (
     <NavigationContainer>
        <Drawer.Navigator
-        // initialRouteName='About'
-        //  defaultStatus='open'
-        //  drawerType='slide'
-
         drawerContent={(props)=><CustomDrawer {...props}/>}
         >
         <Drawer.Screen name="Home" component={Home} 
