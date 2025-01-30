@@ -8,16 +8,17 @@ import Contact from './screen/Contact'
 import CustomDrawer from './component/CustomDrawer'
 import ProfileScreen from './screen/ProfileScreen'
 import Icon from 'react-native-vector-icons/AntDesign';
+import BottomTab from './navigation/BottomTab'
 
+const Drawer=createDrawerNavigator();
 const App = () => {
-  const Drawer=createDrawerNavigator();
 
   return (
     <NavigationContainer>
        <Drawer.Navigator
         drawerContent={(props)=><CustomDrawer {...props}/>}
         >
-        <Drawer.Screen name="Home" component={Home} 
+        <Drawer.Screen name="Home" component={BottomTab} 
           options={{
             drawerIcon:({focused,size})=>(
               <Icon name='home' size={size} color={focused?'blue':'black'}/>
